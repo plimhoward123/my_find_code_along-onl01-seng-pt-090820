@@ -6,6 +6,7 @@ def my_find(collection)
   while i < collection.length
     return collection[i] if yield(collection[i])
     i = i + 1
+    binding.pry
   end
 end
 my_find(collection) {|i| i % 3 == 0 && i % 5 == 0 }
